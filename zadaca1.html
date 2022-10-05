@@ -4,73 +4,130 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>zadaca</title>
   </head>
   <body style="background-color: rgb(40, 39, 39)">
-    <h2 style="display: flex; justify-content: center; color: white">
-      HTML text elementi
-    </h2>
-    <section style="display: flex; justify-content: space-evenly; color: white">
-      <ul style="list-style: none; padding-inline-start: 0px">
-        <li>
-          <pre>< h1 >  < /h1 > <h1>Lorem ipsum dolor sit.</h1></pre>
-        </li>
-        <li>
-          <pre>< h2 >  < /h2 > <h2>Lorem ipsum dolor sit.</h2></pre>
-        </li>
-        <li>
-          <pre>< h3 >  < /h3 > <h3>Lorem ipsum dolor sit.</h3></pre>
-        </li>
-        <li>
-          <pre>< h4 >  < /h4 > <h4>Lorem ipsum dolor sit.</h4></pre>
-        </li>
-        <li>
-          <pre>< h5 >  < /h5 > <h5>Lorem ipsum dolor sit.</h5></pre>
-        </li>
-        <li>
-          <pre>< h6 >  < /h6 > <h6>Lorem ipsum dolor sit.</h6></pre>
-        </li>
-      </ul>
-      <ul style="list-style: none; padding-inline-start: 0px">
-        <li>
-          <pre>< p >  < /p > <p>Lorem ipsum dolor sit.</p></pre>
-        </li>
-        <li>
-          <pre>< span >  < /span > <br> <span>Lorem ipsum dolor sit.</span></pre>
-        </li>
-        <li>
-          <pre>< strong >  < /strong > <br><strong>Lorem ipsum dolor sit.</strong></pre>
-        </li>
-        <li>
-          <pre>< em >  < /em > <br><em>Lorem ipsum dolor sit.</em></pre>
-        </li>
-        <li>
-          <pre>< i >  < /i > <br><i>Lorem ipsum dolor sit.</i></pre>
-        </li>
-        <li>
-          <pre>< b >  < /b > <br><b>Lorem ipsum dolor sit.</b></pre>
-        </li>
-      </ul>
-      <ul style="list-style: none; padding-inline-start: 0px">
-        <li>
-          <pre>< u >  < /u > <br><u>Lorem ipsum dolor sit.</u></pre>
-        </li>
-        <li>
-          <pre>< abbr >  < /abbr > <br><abbr>Lorem ipsum dolor sit.</abbr></pre>
-        </li>
-        <li>
-          <pre>< address >  < /address > <br><address>Lorem ipsum dolor sit.</address></pre>
-        </li>
-        <li>
-          <pre>< bdo >  < /bdo > <br><bdo>Lorem ipsum dolor sit.</bdo></pre>
-        </li>
-        <li>
-          <pre>< cite >  < /cite > <br><cite>Lorem ipsum dolor sit.</cite></pre>
-        </li>
-        <li>
-          <pre>< ins >  < /ins > <br><ins>Lorem ipsum dolor sit.</ins></pre>
-        </li>
-      </ul>
+    <section class="main_section">
+      <h1 style="display: flex; justify-content: center; color: white">
+        <u>HTML text elements</u>
+      </h1>
+      <section class="instructions">
+        just input name of HTML text element example : <br />
+        span
+      </section>
+      <div class="input_container">
+        <input
+          class="input"
+          type="text"
+          placeholder="input HTML text element tag"
+          id="input_box_1"
+          onclick="clearInput()"
+        />
+      </div>
+      <div class="btn_container">
+        <button class="btn_submit" onclick="handleClick()">show element</button>
+      </div>
+      <div class="show_element" id="presented"></div>
     </section>
+    <script>
+      const clearInput = () => {
+        document.getElementById("input_box_1").value = "";
+      };
+      const handleClick = () => {
+        const posible_elements = [
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "h6",
+          "strong",
+          "p",
+          "span",
+          "b",
+          "em",
+          "i",
+          "cite",
+          "ins",
+          "address",
+          "abbr",
+          "u",
+          "bdo",
+        ];
+
+        const input_value = document.getElementById("input_box_1").value;
+        const showElement = `<${input_value}> this text is placeholder </${input_value}>`;
+        if (posible_elements.includes(input_value)) {
+          document.getElementById("presented").innerHTML = showElement;
+        } else {
+          document.getElementById(
+            "presented"
+          ).innerHTML = `<h2>there is no such text element</h2>`;
+        }
+      };
+    </script>
   </body>
 </html>
+
+<!-- 
+  <ul style="list-style: none; padding-inline-start: 0px">
+    <li>
+      <pre>< h1 >  < /h1 > <h1>Lorem ipsum dolor sit.</h1></pre>
+    </li>
+    <li>
+      <pre>< h2 >  < /h2 > <h2>Lorem ipsum dolor sit.</h2></pre>
+    </li>
+    <li>
+      <pre>< h3 >  < /h3 > <h3>Lorem ipsum dolor sit.</h3></pre>
+    </li>
+    <li>
+      <pre>< h4 >  < /h4 > <h4>Lorem ipsum dolor sit.</h4></pre>
+    </li>
+    <li>
+      <pre>< h5 >  < /h5 > <h5>Lorem ipsum dolor sit.</h5></pre>
+    </li>
+    <li>
+      <pre>< h6 >  < /h6 > <h6>Lorem ipsum dolor sit.</h6></pre>
+    </li>
+  </ul>
+  <ul style="list-style: none; padding-inline-start: 0px">
+    <li>
+      <pre>< p >  < /p > <p>Lorem ipsum dolor sit.</p></pre>
+    </li>
+    <li>
+      <pre>< span >  < /span > <br> <span>Lorem ipsum dolor sit.</span></pre>
+    </li>
+    <li>
+      <pre>< strong >  < /strong > <br><strong>Lorem ipsum dolor sit.</strong></pre>
+    </li>
+    <li>
+      <pre>< em >  < /em > <br><em>Lorem ipsum dolor sit.</em></pre>
+    </li>
+    <li>
+      <pre>< i >  < /i > <br><i>Lorem ipsum dolor sit.</i></pre>
+    </li>
+    <li>
+      <pre>< b >  < /b > <br><b>Lorem ipsum dolor sit.</b></pre>
+    </li>
+  </ul>
+  <ul style="list-style: none; padding-inline-start: 0px">
+    <li>
+      <pre>< u >  < /u > <br><u>Lorem ipsum dolor sit.</u></pre>
+    </li>
+    <li>
+      <pre>< abbr >  < /abbr > <br><abbr>Lorem ipsum dolor sit.</abbr></pre>
+    </li>
+    <li>
+      <pre>< address >  < /address > <br><address>Lorem ipsum dolor sit.</address></pre>
+    </li>
+    <li>
+      <pre>< bdo >  < /bdo > <br><bdo>Lorem ipsum dolor sit.</bdo></pre>
+    </li>
+    <li>
+      <pre>< cite >  < /cite > <br><cite>Lorem ipsum dolor sit.</cite></pre>
+    </li>
+    <li>
+      <pre>< ins >  < /ins > <br><ins>Lorem ipsum dolor sit.</ins></pre>
+    </li>
+  </ul> -->
