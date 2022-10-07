@@ -58,3 +58,27 @@ align-items: center;
     background-color:rgb(34, 34, 67) ;
     border-radius: 10px;
 }
+
+
+.table_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table, th, td {
+    border: 1px solid white;
+    /* border-collapse: collapse; */
+    text-align: center;
+    
+  }
+
+  .table_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .table_st{
+    height: 300px;
+    width: 100%;
+  }
