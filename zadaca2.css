@@ -180,3 +180,42 @@ width: 100%;
     cursor: pointer;
     font-weight: 100;
 }
+
+
+.fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+border-radius: 10px;
+width: 60%;
+margin: auto;
+
+}
+
+.dataList{
+    display: flex;
+    border:1px solid black;
+    border-radius: 10px;
+    height: 25px;
+    width:60% ;
+    padding-left: 20px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.out{
+max-width: 100%;
+margin: auto;
+}
+
+.inp{
+    width: 30%;
+}
+
+.area{
+     display: flex;
+     margin: auto;
+     border-radius: 10px;
+     margin-bottom: 30px;
+}

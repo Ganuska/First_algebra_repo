@@ -15,10 +15,10 @@
         <p class="firstSub">it`s quick and easy.</p>
         <hr />
         <form action="#" method="get" class="formStyle">
-            <div class="containerFirstInput">
-              <input class="inputEl name" type="text"  placeholder="First Name" />
-              <input class="inputEl name" type="text" placeholder="Last Name" />
-            </div>
+          <div class="containerFirstInput">
+            <input class="inputEl name" type="text" placeholder="First Name" />
+            <input class="inputEl name" type="text" placeholder="Last Name" />
+          </div>
           <input
             class="inputElEmailPass"
             type="email"
@@ -39,34 +39,31 @@
           <div class="smallText">
             <sub> <b>birthday</b> </sub>
           </div>
-          <div class="selectDiv" >
-            <select class="inputEl selectEl" name="month" id="months">
-            </select>
-            <select class="inputEl selectEl" name="day" id="days">
-            </select>
-            <select class="inputEl selectEl" name="year" id="years">
-            </select>
+          <div class="selectDiv">
+            <select class="inputEl selectEl" name="month" id="months"></select>
+            <select class="inputEl selectEl" name="day" id="days"></select>
+            <select class="inputEl selectEl" name="year" id="years"></select>
           </div>
           <div class="smallText">
             <sub> <b>Gender</b> </sub>
           </div>
-          <div class="radioContainer" >
+          <div class="radioContainer">
             <div class="inputEl gender">
               <label for="female">Female</label>
-              <input class="radioBtn" type="radio" name="Gender" id="female">  
+              <input class="radioBtn" type="radio" name="Gender" id="female" />
             </div>
             <div class="inputEl gender">
               <label for="male">Male</label>
-              <input class="radioBtn" type="radio" name="Gender" id="male">  
+              <input class="radioBtn" type="radio" name="Gender" id="male" />
             </div>
-
-        </div>
-        <br>
-        <sub>this is mockup of facebook signUp form</sub>
-        <br>
-        <button class="signUpBtn">Sign Up</button>
-        <h2><a class="alredy" href="index.html">Alredy have an account?</a></h2>    
-      </div>
+          </div>
+          <br />
+          <sub>this is mockup of facebook signUp form</sub>
+          <br />
+          <button class="signUpBtn">Sign Up</button>
+          <h2>
+            <a class="alredy" href="index.html">Alredy have an account?</a>
+          </h2>
         </form>
       </div>
     </section>
@@ -85,22 +82,22 @@
         "November",
         "December",
       ];
-const monthInput = document.getElementById('months')
-monthInput.innerHTML=month.map(item=>`<option value='${item}'>${item}</option>`)
-const yearsInput = document.getElementById('years')
-let years = '';
-  for(let i=1905; i<2022 ;i++){
-    years += `<option value='${i}'>${i}</option>`  ;
-  }
-yearsInput.innerHTML=years
-const daysInput = document.getElementById('days')
-let days = '';
-  for(let i=1; i<32 ;i++){
-    days += `<option value='${i}'>${i}</option>`  ;
-  }
-daysInput.innerHTML=days
-
-
-</script>
+      const monthInput = document.getElementById("months");
+      monthInput.innerHTML = month.map(
+        (item) => `<option value='${item}'>${item}</option>`
+      );
+      const yearsInput = document.getElementById("years");
+      let years = "";
+      for (let i = 1905; i < 2022; i++) {
+        years += `<option value='${i}'>${i}</option>`;
+      }
+      yearsInput.innerHTML = years;
+      const daysInput = document.getElementById("days");
+      let days = "";
+      for (let i = 1; i < 32; i++) {
+        days += `<option value='${i}'>${i}</option>`;
+      }
+      daysInput.innerHTML = days;
+    </script>
   </body>
 </html>
